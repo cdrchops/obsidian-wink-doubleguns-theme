@@ -1,6 +1,6 @@
 {
-    "name": "minimal",
-    "version": "1.0.0",
+    "name": "wink_doubleguns",
+    "version": "0.0.1",
     "dependencies": {
         "dotenv": "^10.0.0",
         "sass": "^1.71.1"

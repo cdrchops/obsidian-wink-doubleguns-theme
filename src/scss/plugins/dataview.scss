@@ -121,7 +121,8 @@ body .dataview .inline-field-standalone-value {
 	font-family:var(--font-text);
 	font-size:calc(var(--font-adaptive-normal) - 2px);
 	background:transparent;
-	color:var(--text-muted);
+	//color:var(--text-muted);
+	color: var(--text-accent);
 }
 body .dataview.inline-field-key {
 	padding:0;
