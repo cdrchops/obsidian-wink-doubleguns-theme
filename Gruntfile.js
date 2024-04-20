@@ -78,9 +78,9 @@ module.exports = function(grunt) {
             local: { 
                 expand: true,
                 src: 'theme.css',
-                dest: process.env.HOME + process.env.OBSIDIAN_PATH,
+                dest: '/mnt/c/projects/obsidianSync/.obsidian/themes/WinkDoubleguns/',//process.env.HOME + process.env.OBSIDIAN_PATH
                 rename: function(dest, src) {
-                   return dest + 'theme.css';
+                   return dest + src;
                 } 
             }
         },

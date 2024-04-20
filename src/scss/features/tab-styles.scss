@@ -1,14 +1,14 @@
 /* Main tabs */
 body {
-	--minimal-tab-text-color: var(--text-muted);
-	--minimal-tab-text-color-active: var(--text-normal);
+	--minimal-tab-text-color: var(--text-accent);
+	--minimal-tab-text-color-active: var(--color-accent);
 }
 .workspace-tabs:not(.mod-stacked) {
-	--tab-text-color: var(--minimal-tab-text-color);
-	--tab-text-color-focused: var(--minimal-tab-text-color);
-	--tab-text-color-active: var(--minimal-tab-text-color-active);
-	--tab-text-color-focused-active: var(--minimal-tab-text-color-active);
-	--tab-text-color-focused-active-current: var(--minimal-tab-text-color-active);
+	--tab-text-color: var(--text-accent);
+	--tab-text-color-focused: var(--text-accent);
+	--tab-text-color-active: var(--text-accent);
+	--tab-text-color-focused-active: var(--text-accent);
+	--tab-text-color-focused-active-current: var(--text-accent);
 }
 .tabs-plain-square .mod-root {
 	--tab-curve: 0;
@@ -58,6 +58,7 @@ body {
 	}
 	.workspace-tab-header-inner:hover {
 		background-color: transparent;
+		cursor:pointer;
 	}
 }
 
@@ -118,9 +119,6 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 			height: var(--tab-height);
 			margin-left: var(--size-4-1);
 			padding: 0;
-			&:hover {
-
-			}
 			&.is-active {
 				.workspace-tab-header-inner-title {
 					color: var(--tab-text-color-active);

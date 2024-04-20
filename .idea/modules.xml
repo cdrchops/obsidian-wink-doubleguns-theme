@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../obsidian-sample-theme/.idea/obsidian-sample-theme.iml" filepath="$PROJECT_DIR$/../obsidian-sample-theme/.idea/obsidian-sample-theme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../obsidian-things/.idea/obsidian-things.iml" filepath="$PROJECT_DIR$/../obsidian-things/.idea/obsidian-things.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/obsidian-wink-doubleguns-theme.iml" filepath="$PROJECT_DIR$/.idea/obsidian-wink-doubleguns-theme.iml" />
     </modules>
   </component>

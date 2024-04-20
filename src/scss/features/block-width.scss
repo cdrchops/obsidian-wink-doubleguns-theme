@@ -1,9 +1,9 @@
 body {
-	--content-margin: auto;
-	--content-margin-start: max(
-		calc(50% - var(--line-width)/2),
-		calc(50% - var(--max-width)/2) );
-	--content-line-width: min(var(--line-width), var(--max-width));
+	--content-margin: 50px;
+	//--content-margin-start: max(
+	//	calc(50% - var(--line-width)/2),
+	//	calc(50% - var(--max-width)/2) );
+	//--content-line-width: 100%;// min(var(--line-width), 100%);//var(--max-width)
 }
 
 /* Line widths ------------------------------------ */

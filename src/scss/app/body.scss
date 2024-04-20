@@ -110,7 +110,7 @@ body {
 	--embed-block-shadow-hover: 0 0 0 1px var(--background-modifier-border),
 	inset 0 0 0 1px var(--background-modifier-border);
 	/* File layout */
-	--file-line-width: 700px;
+	--file-line-width: 100%;
 	--file-folding-offset: 24px;
 	--file-margins: var(--size-4-8);
 	--file-header-font-size: var(--font-ui-small);
@@ -192,7 +192,7 @@ body {
 	--h5-style:normal;
 	--h6-style:normal;
 	/* View header */
-	--header-height: 20px;
+	--header-height: 35px;
 	/* Horizontal rules */
 	--hr-color: var(--background-modifier-border);
 	--hr-thickness: 2px;
@@ -398,17 +398,17 @@ body {
 
 	/* Tabs */
 	--tab-background-active: var(--background-primary);
-	--tab-text-color: var(--text-faint);
-	--tab-text-color-active: var(--text-muted);
-	--tab-text-color-focused: var(--text-muted);
-	--tab-text-color-focused-active: var(--text-muted);
+	--tab-text-color: var(--background-primary);
+	--tab-text-color-active: var(--text-accent);
+	--tab-text-color-focused: var(--color-accent);
+	--tab-text-color-focused-active: var(--color-accent);
 	--tab-text-color-focused-highlighted: var(--text-accent);
 	--tab-text-color-focused-active-current: var(--text-normal);
 	--tab-font-size: var(--font-ui-small);
 	--tab-font-weight: inherit;
 	--tab-container-background: var(--background-secondary);
 	--tab-divider-color: var(--background-modifier-border-hover);
-	--tab-outline-color: var(--divider-color);
+	--tab-outline-color: var(--color-accent);
 	--tab-outline-width: 1px;
 	--tab-curve: 6px;
 	--tab-radius: var(--radius-s);
@@ -539,6 +539,8 @@ body {
 	//--interactive-accent: var(--color-accent-1);
 	//--interactive-accent-hover: var(--color-accent-2);
 	/* Tags */
+
+	width: 100%
 }
 
 .theme-light {
@@ -590,9 +592,17 @@ body {
 	--interactive-accent-rgb: #d6ba7c;
 }
 
-.cm-hashtag {
+.cm-hashtag,
+.cm-hashtag-end {
 	color: var(--tag-color);
 	background-color: var(--tag-background);
+}
+
+.cm-hashtag-end:hover,
+.cm-hashtag:hover {
+	//color: black;
+	//background-color: orange;
+	cursor: pointer
 }
 
 input[type=checkbox] {
@@ -604,3 +614,13 @@ input[type=checkbox]:focus {
 	background-color: var(--text-accent);
 	border-color: var(--text-accent);
 }
+
+//.tag:hover {
+//	color: var(--color-accent)
+//}
+
+.workspace-tab-header {
+	cursor: pointer;
+}
+
+
