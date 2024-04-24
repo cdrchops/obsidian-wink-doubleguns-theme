@@ -20,6 +20,24 @@ body {
   --bold-weight: 600;
   --link-weight: inherit;
   /* Headings */
+  --h1-color: inherit;
+  --h2-color: inherit;
+  --h3-color: inherit;
+  --h4-color: inherit;
+  --h5-color: inherit;
+  --h6-color: inherit;
+  --h1-font: inherit;
+  --h2-font: inherit;
+  --h3-font: inherit;
+  --h4-font: inherit;
+  --h5-font: inherit;
+  --h6-font: inherit;
+  --h1-line-height: 1;
+  --h2-line-height: 1;
+  --h3-line-height: 1;
+  --h4-line-height: 1;
+  --h5-line-height: var(--line-height-normal);
+  --h6-line-height: var(--line-height-normal);
   --inline-title-margin-bottom: 1rem;
   --h1-size: 1.125em;
   --h2-size: 1.05em;
@@ -60,8 +78,9 @@ body {
   --list-edit-offset: 0.5em;
   --list-indent: 2em;
   --list-spacing: 0.075em;
+  /* View header */
   --input-height: 32px;
-  --header-height: 40px;
+  --header-height: 35px;
   /* Metadata */
   --metadata-label-width: 9rem;
   --metadata-label-font-size: var(--font-adaptive-small);
@@ -88,6 +107,12 @@ body {
   /* Readable line length off */
   --file-margins: var(--size-4-2) var(--size-4-12);
 }
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  line-height: 1;
+  padding: 0;
+  height: 0.5px;
+  font-weight: bold;
+}
 
 .mod-macos {
   --top-left-padding-y:24px;
@@ -104,6 +129,18 @@ body {
     --border-width: 0.75px;
   }
 }
+.cm-s-obsidian .cm-active span.cm-link.cm-hmd-barelink,
+.cm-s-obsidian span.cm-link.cm-hmd-barelink,
+.cm-s-obsidian span.cm-link.cm-hmd-barelink:hover {
+  color: var(--text-accent);
+}
+
+.cm-s-obsidian .cm-active .cm-formatting.cm-formatting-link,
+.cm-s-obsidian span.cm-image-alt-text.cm-link,
+.cm-s-obsidian:not(.is-live-preview) .cm-formatting-link + span.cm-link {
+  color: var(--text-accent);
+}
+
 /* Dynamic colors
 
 Most colors are driven from the following values, meaning that 
@@ -811,52 +848,6 @@ body {
   --graph-node-focused: var(--text-accent);
   --graph-node-tag: var(--color-green);
   --graph-node-attachment: var(--color-yellow);
-  /* Headings */
-  --heading-formatting: var(--text-faint);
-  --h1-color: inherit;
-  --h2-color: inherit;
-  --h3-color: inherit;
-  --h4-color: inherit;
-  --h5-color: inherit;
-  --h6-color: inherit;
-  --h1-font: inherit;
-  --h2-font: inherit;
-  --h3-font: inherit;
-  --h4-font: inherit;
-  --h5-font: inherit;
-  --h6-font: inherit;
-  --h1-line-height: 1;
-  --h2-line-height: 1;
-  --h3-line-height: 1;
-  --h4-line-height: 1;
-  --h5-line-height: var(--line-height-normal);
-  --h6-line-height: var(--line-height-normal);
-  --h1-size: 1.250em;
-  --h2-size:1.125em;
-  --h3-size:1.05em;
-  --h4-size:1em;
-  --h5-size:0.90em;
-  --h6-size:0.90em;
-  --h1-weight:600;
-  --h2-weight:600;
-  --h3-weight:500;
-  --h4-weight:500;
-  --h5-weight:500;
-  --h6-weight:400;
-  --h1-variant:normal;
-  --h2-variant:normal;
-  --h3-variant:normal;
-  --h4-variant:normal;
-  --h5-variant:small-caps;
-  --h6-variant:small-caps;
-  --h1-style:normal;
-  --h2-style:normal;
-  --h3-style:normal;
-  --h4-style:normal;
-  --h5-style:normal;
-  --h6-style:normal;
-  /* View header */
-  --header-height: 35px;
   /* Horizontal rules */
   --hr-color: var(--background-modifier-border);
   --hr-thickness: 2px;
@@ -1614,6 +1605,7 @@ body.is-focused {
 .modal.mod-settings button:not(.mod-warning) {
   white-space: nowrap;
   transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+  color: black;
 }
 
 button.mod-warning {
@@ -4886,6 +4878,173 @@ body:not(.full-file-names) .tree-item-inner {
 .is-mobile .workspace-drawer.mod-right.is-pinned {
   max-width: var(--mobile-right-sidebar-width);
   min-width: 150pt;
+}
+
+/* --------------------- */
+/* Mobile toolbar button */
+/* --------------------- */
+body.is-mobile:not(.floating-button-off):not(.advanced-toolbar) .view-action:nth-last-of-type(2),
+body.is-mobile:not(.floating-button-off):not(.advanced-toolbar) .view-action:nth-last-of-type(2) {
+  color: white;
+  background-color: var(--text-accent);
+  opacity: 1;
+  top: calc(90vh - 110px);
+  display: flex;
+  padding: 5px;
+  position: fixed;
+  left: 86vw;
+  transform: translate(-40%, 5%);
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  height: 53px;
+  border-radius: 50% !important;
+  box-shadow: 1.1px 0.3px 2.2px rgba(0, 0, 0, 0.02), 2.7px 0.7px 5.3px rgba(0, 0, 0, 0.028), 5px 1.3px 10px rgba(0, 0, 0, 0.035), 8.9px 2.2px 17.9px rgba(0, 0, 0, 0.042), 16.7px 4.2px 33.4px rgba(0, 0, 0, 0.05), 40px 10px 80px rgba(0, 0, 0, 0.07);
+}
+
+body.is-mobile:not(.floating-button-off).advanced-toolbar .view-action:nth-last-of-type(2),
+body.is-mobile:not(.floating-button-off).advanced-toolbar .view-action:nth-last-of-type(2) {
+  color: white;
+  background-color: var(--text-accent);
+  opacity: 1;
+  position: fixed;
+  top: calc(100vh - 138px);
+  display: flex;
+  padding: 5px;
+  left: 86vw;
+  transform: translate(-40%, -115%);
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  height: 53px;
+  border-radius: 50% !important;
+  box-shadow: 1.1px 0.3px 2.2px rgba(0, 0, 0, 0.02), 2.7px 0.7px 5.3px rgba(0, 0, 0, 0.028), 5px 1.3px 10px rgba(0, 0, 0, 0.035), 8.9px 2.2px 17.9px rgba(0, 0, 0, 0.042), 16.7px 4.2px 33.4px rgba(0, 0, 0, 0.05), 40px 10px 80px rgba(0, 0, 0, 0.07);
+}
+
+.view-header.is-highlighted:after {
+  background-color: var(--text-selection);
+}
+
+.view-header.is-highlighted .view-actions {
+  background: transparent;
+}
+
+.view-header-icon,
+.workspace-tab-header,
+.nav-action-button,
+.side-dock-ribbon-tab,
+.view-action {
+  background: transparent;
+  color: var(--text-muted);
+  opacity: var(--icon-muted);
+  transition: opacity 0.1s ease-in-out;
+  cursor: var(--cursor);
+}
+
+.view-action:hover,
+.view-header-icon:hover,
+.nav-action-button:hover,
+.workspace-tab-header:hover,
+.side-dock-ribbon-tab:hover,
+.side-dock-ribbon-action:hover {
+  background: transparent;
+  color: var(--text-muted);
+  opacity: 1;
+  transition: opacity 0 ease-in-out;
+}
+
+.view-actions {
+  margin-right: 10px;
+  z-index: 15;
+  background: var(--background-primary);
+}
+
+.workspace-ribbon-collapse-btn,
+.view-action,
+.side-dock-ribbon-tab,
+.side-dock-ribbon-action {
+  cursor: var(--cursor);
+}
+
+body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=localgraph] .view-actions,
+body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=graph] .view-actions {
+  background: transparent;
+}
+
+.is-mobile.focus-mode .view-actions {
+  opacity: 1;
+}
+
+.is-mobile .view-action svg {
+  width: 22px;
+}
+
+.is-mobile .view-action {
+  padding: 5px 5px 4px;
+  margin: 0;
+  border-radius: 8px;
+}
+
+.is-mobile .view-action {
+  padding: 3px 0 0 4px;
+  margin-top: -4px;
+}
+
+.is-mobile .view-action {
+  padding: 5px 5px 4px;
+  border-radius: 8px;
+}
+
+.is-mobile .view-action:hover,
+.is-mobile .nav-action-button:hover,
+.is-mobile .workspace-leaf-content[data-type=search] .nav-action-button.is-active:hover,
+.is-mobile .workspace-leaf-content[data-type=backlink] .nav-action-button.is-active:hover,
+.is-mobile .workspace-drawer-tab-option-item:hover,
+.is-mobile .workspace-drawer-header-icon:hover {
+  background-color: var(--background-tertiary);
+  box-shadow: 0 0 0 2px var(--background-tertiary);
+}
+
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
+  padding-bottom: 33px;
+  margin-left: 0;
+  height: auto;
+}
+
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-action {
+  margin: 3px 0;
+  padding: 4px 1px;
+}
+
+body.hider-ribbon.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
+  padding-bottom: 50px;
+}
+
+.view-actions {
+  margin-right: 0px;
+  margin-left: auto;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.view-actions .view-action {
+  margin-right: 8px;
+}
+
+.view-action.is-active {
+  color: var(--text-faint);
+  opacity: 1;
+}
+
+.view-actions .view-action:last-child {
+  margin-left: 2px;
+}
+
+body:not(.minimal-icons-off) .view-action svg,
+body:not(.minimal-icons-off) .workspace-tab-header-inner-icon svg,
+body:not(.minimal-icons-off) .nav-action-button svg,
+body:not(.minimal-icons-off) .graph-controls-button svg {
+  width: 18px;
+  height: 18px;
 }
 
 /* Mobile

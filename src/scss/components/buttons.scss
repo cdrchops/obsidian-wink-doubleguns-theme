@@ -4,6 +4,7 @@
 .modal.mod-settings button:not(.mod-warning) {
 	white-space:nowrap;
 	transition:background-color 0.2s ease-out, border-color 0.2s ease-out;
+	color:black;
 }
 button.mod-warning {
 	border:1px solid var(--background-modifier-error);

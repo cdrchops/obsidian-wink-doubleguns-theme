@@ -22,6 +22,26 @@ body {
 	--link-weight: inherit;
 
 	/* Headings */
+	--h1-color: inherit;
+	--h2-color: inherit;
+	--h3-color: inherit;
+	--h4-color: inherit;
+	--h5-color: inherit;
+	--h6-color: inherit;
+	--h1-font: inherit;
+	--h2-font: inherit;
+	--h3-font: inherit;
+	--h4-font: inherit;
+	--h5-font: inherit;
+	--h6-font: inherit;
+
+	--h1-line-height: 1;
+	--h2-line-height: 1;
+	--h3-line-height: 1;
+	--h4-line-height: 1;
+	--h5-line-height: var(--line-height-normal);
+	--h6-line-height: var(--line-height-normal);
+
 	--inline-title-margin-bottom: 1rem;
 
 	--h1-size: 1.125em;
@@ -71,8 +91,16 @@ body {
 	--list-indent: 2em;
 	--list-spacing: 0.075em;
 
+	/* View header */
 	--input-height: 32px;
-	--header-height: 40px;
+	--header-height: 35px;
+
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1;
+		padding: 0;
+		height: 0.5px;
+		font-weight: bold;
+	}
 
 	/* Metadata */
 	--metadata-label-width: 9rem;
@@ -123,3 +151,13 @@ body {
 		--border-width: 0.75px;
 	}
 }
+
+.cm-s-obsidian .cm-active span.cm-link.cm-hmd-barelink,
+.cm-s-obsidian span.cm-link.cm-hmd-barelink,
+.cm-s-obsidian span.cm-link.cm-hmd-barelink:hover {
+	color: var(--text-accent); }
+
+.cm-s-obsidian .cm-active .cm-formatting.cm-formatting-link,
+.cm-s-obsidian span.cm-image-alt-text.cm-link,
+.cm-s-obsidian:not(.is-live-preview) .cm-formatting-link + span.cm-link {
+	color: var(--text-accent); }

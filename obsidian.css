@@ -1162,7 +1162,7 @@ span.cm-image-marker,
 .cm-s-obsidian .cm-active span.cm-link.cm-hmd-barelink.cm-formatting-link-start,
 .cm-s-obsidian span.cm-link.cm-hmd-barelink.cm-formatting-link-start,
 .cm-s-obsidian span.cm-formatting-link {
-  color: var(--text-faint); }
+  color: var(--text-accent); }
 
 /* Editor Mode Footnotes */
 .cm-s-obsidian span.cm-footref {
@@ -1174,7 +1174,7 @@ span.cm-image-marker,
 
 /* Editor Mode Quotes */
 .cm-formatting-quote {
-  color: var(--text-faint) !important; }
+  color: var(--text-accent) !important; }
 
 /* Transcluded notes and embeds */
 /* Strict embeds (naked) */
@@ -2147,12 +2147,12 @@ a em,
 .cm-s-obsidian .cm-active span.cm-link.cm-hmd-barelink,
 .cm-s-obsidian span.cm-link.cm-hmd-barelink,
 .cm-s-obsidian span.cm-link.cm-hmd-barelink:hover {
-  color: var(--text-normal); }
+  color: var(--text-accent); }
 
 .cm-s-obsidian .cm-active .cm-formatting.cm-formatting-link,
 .cm-s-obsidian span.cm-image-alt-text.cm-link,
 .cm-s-obsidian:not(.is-live-preview) .cm-formatting-link + span.cm-link {
-  color: var(--text-muted); }
+  color: var(--text-accent); }
 
 /* Reader Mode Lists  */
 div > ol,
