@@ -1238,8 +1238,22 @@ input[type=checkbox]:focus {
   border-color: var(--text-accent);
 }
 
+a.tag:hover {
+  background-color: #f7ba21;
+  color: black;
+}
+
 .workspace-tab-header {
   cursor: pointer;
+}
+
+.multi-select-pill:hover {
+  background-color: #f7ba21;
+  color: black;
+}
+
+.multi-select-pill-remove-button:hover, lucide-x:hover {
+  color: black;
 }
 
 /* Editor mode (CodeMirror 6 Live Preview) */
