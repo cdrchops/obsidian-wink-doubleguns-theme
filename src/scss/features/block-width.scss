@@ -11,7 +11,8 @@ body {
 /* Set overall context to 100% width */
 .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
 	max-width: 100%;
-	margin-inline: auto;
+	margin-left: 50px;
+	//margin-inline: auto;
 	width: 100%;
 }
 /* Prevent x overflow when line numbers are on
@@ -322,7 +323,8 @@ body:not(.table-100):not(.table-max):not(.table-wide) {
 	table {
 		width: var(--table-width);
 		max-width:var(--table-max-width);
-		margin-inline: var(--table-margin);
+		margin-left: 50px;
+		//margin-inline: var(--table-margin);
 		min-width: var(--table-min-width);
 	}
 	.block-language-dataviewjs {
@@ -335,7 +337,8 @@ body:not(.table-100):not(.table-max):not(.table-wide) {
 		}
 	}
 	.dataview.dataview-error-box {
-		margin-inline: var(--table-margin);
+		//margin-inline: var(--table-margin);
+		margin-left: 50px;
 	}
 
 	/* Images */

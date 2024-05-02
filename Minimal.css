@@ -1295,6 +1295,14 @@ a.tag:hover,
   color: black;
 }
 
+button:not(.clickable-icon) {
+  background-color: var(--text-accent);
+}
+
+#twcss .text-modifier-error {
+  color: black;
+}
+
 /* Editor mode (CodeMirror 6 Live Preview) */
 /* Fix strange Obsidian ghost textearea bug on right click */
 .CodeMirror-wrap > div > textarea {
@@ -2359,7 +2367,7 @@ body {
 /* Set overall context to 100% width */
 .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
   max-width: 100%;
-  margin-inline: auto;
+  margin-left: 50px;
   width: 100%;
 }
 
@@ -2699,7 +2707,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer table {
   width: var(--table-width);
   max-width: var(--table-max-width);
-  margin-inline: var(--table-margin);
+  margin-left: 50px;
   min-width: var(--table-min-width);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .block-language-dataviewjs > :is(p, h1, h2, h3, h4, h5, h6),
@@ -2713,7 +2721,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .dataview.dataview-error-box,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .dataview.dataview-error-box {
-  margin-inline: var(--table-margin);
+  margin-left: 50px;
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed {

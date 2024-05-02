@@ -585,3 +585,13 @@ a.tag:hover,
 .multi-select-pill-remove-button:hover, lucide-x:hover {
 	color: black;
 }
+
+button:not(.clickable-icon) {
+	background-color: var(--text-accent);
+}
+
+#twcss .text-modifier-error {
+	color: black;
+}
+
+
