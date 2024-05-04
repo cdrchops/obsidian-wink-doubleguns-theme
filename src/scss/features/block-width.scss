@@ -1,5 +1,5 @@
 body {
-	--content-margin: 50px;
+	--content-margin: 5px;
 	//--content-margin-start: max(
 	//	calc(50% - var(--line-width)/2),
 	//	calc(50% - var(--max-width)/2) );
@@ -11,7 +11,7 @@ body {
 /* Set overall context to 100% width */
 .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
 	max-width: 100%;
-	margin-left: 50px;
+	margin-left: 5px;
 	//margin-inline: auto;
 	width: 100%;
 }
@@ -97,7 +97,7 @@ body {
 	--table-margin: inherit;
 	--table-wrapper-width: fit-content;
 
-	--container-dataview-table-width: var(--line-width);
+	--container-dataview-table-width: calc(100vw);//var(--line-width);
 
 	--container-img-width: var(--line-width);
 	--container-img-max-width: var(--max-width);
@@ -323,7 +323,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) {
 	table {
 		width: var(--table-width);
 		max-width:var(--table-max-width);
-		margin-left: 50px;
+		margin-left: 5px;
 		//margin-inline: var(--table-margin);
 		min-width: var(--table-min-width);
 	}
@@ -338,7 +338,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) {
 	}
 	.dataview.dataview-error-box {
 		//margin-inline: var(--table-margin);
-		margin-left: 50px;
+		margin-left: 5px;
 	}
 
 	/* Images */
