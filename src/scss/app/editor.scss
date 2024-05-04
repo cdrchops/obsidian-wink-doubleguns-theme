@@ -98,7 +98,7 @@ body {
 }
 .is-live-preview:not(.is-readable-line-width) .cm-embed-block > .edit-block-button {
 	padding-left:0px !important;
-	margin-left:0 !important;
+	margin-left: var(--margin-left) !important;
 	padding:4px
 }
 .markdown-source-view.mod-cm6 .edit-block-button:hover {

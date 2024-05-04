@@ -134,6 +134,9 @@ body {
 
 	/* Readable line length off */
 	--file-margins: var(--size-4-2) var(--size-4-12);
+
+	--margin-left: 40px;
+	--container-dataview-table-width: calc(100vw);//var(--line-width);
 }
 
 .mod-macos {
@@ -155,9 +158,12 @@ body {
 .cm-s-obsidian .cm-active span.cm-link.cm-hmd-barelink,
 .cm-s-obsidian span.cm-link.cm-hmd-barelink,
 .cm-s-obsidian span.cm-link.cm-hmd-barelink:hover {
-	color: var(--text-accent); }
+	color: var(--text-accent);
+}
 
 .cm-s-obsidian .cm-active .cm-formatting.cm-formatting-link,
 .cm-s-obsidian span.cm-image-alt-text.cm-link,
 .cm-s-obsidian:not(.is-live-preview) .cm-formatting-link + span.cm-link {
-	color: var(--text-accent); }
+	color: var(--text-accent);
+}
+
