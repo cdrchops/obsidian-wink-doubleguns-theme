@@ -4887,7 +4887,7 @@ body:not(.full-file-names) .tree-item-inner {
   --background-modifier-form-field-highlighted: var(--background-secondary);
 }
 .is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
-  margin-left: var(--margin-left);
+  margin-left: 0;
 }
 
 .is-mobile .workspace-drawer.mod-left.is-pinned {
