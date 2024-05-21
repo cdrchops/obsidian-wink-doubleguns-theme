@@ -601,5 +601,12 @@ button:not(.clickable-icon) {
 	color: black;
 }
 
-
-
+.notice-container {
+	z-index: var(--layer-notice);
+	position: absolute;
+	top: 25px;
+	left: 50%;
+	padding: 10px;
+	overflow: hidden;
+	display: flex;
+}
