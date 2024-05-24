@@ -5173,8 +5173,8 @@ body:not(.full-file-names) .tree-item-inner {
 /* --------------------- */
 /* Mobile toolbar button */
 /* --------------------- */
-body.is-mobile:not(.floating-button-off):not(.advanced-toolbar).view-action:nth-last-of-type(2),
-body.is-mobile:not(.floating-button-off):not(.advanced-toolbar).view-action:nth-last-of-type(2) {
+body.is-mobile:not(.floating-button-off):not(.advanced-toolbar) .view-action:nth-last-of-type(2),
+body.is-mobile:not(.floating-button-off):not(.advanced-toolbar) .view-action:nth-last-of-type(2) {
   color: black;
   background-color: var(--text-accent);
   opacity: 1;
@@ -5348,7 +5348,7 @@ body:not(.minimal-icons-off) .graph-controls-button svg {
 
 .is-mobile .notice {
   background-color: var(--interactive-accent);
-  color: var(--text-on-accent);
+  color: black;
   margin: 0 auto var(--size-4-1);
   text-align: center;
   border-radius: 30px;
