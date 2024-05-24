@@ -5130,9 +5130,9 @@ body:not(.full-file-names) .tree-item-inner {
 /* --------------------- */
 /* Mobile toolbar button */
 /* --------------------- */
-body.is-mobile:not(.floating-button-off):not(.advanced-toolbar) .view-action:nth-last-of-type(2),
-body.is-mobile:not(.floating-button-off):not(.advanced-toolbar) .view-action:nth-last-of-type(2) {
-  color: white;
+body.is-mobile:not(.floating-button-off):not(.advanced-toolbar).view-action:nth-last-of-type(2),
+body.is-mobile:not(.floating-button-off):not(.advanced-toolbar).view-action:nth-last-of-type(2) {
+  color: black;
   background-color: var(--text-accent);
   opacity: 1;
   top: calc(90vh - 110px);
@@ -5151,7 +5151,7 @@ body.is-mobile:not(.floating-button-off):not(.advanced-toolbar) .view-action:nth
 
 body.is-mobile:not(.floating-button-off).advanced-toolbar .view-action:nth-last-of-type(2),
 body.is-mobile:not(.floating-button-off).advanced-toolbar .view-action:nth-last-of-type(2) {
-  color: white;
+  color: black;
   background-color: var(--text-accent);
   opacity: 1;
   position: fixed;
@@ -5311,6 +5311,28 @@ body:not(.minimal-icons-off) .graph-controls-button svg {
   border-radius: 30px;
   max-width: none;
   box-shadow: none;
+}
+
+a.tag:hover,
+.multi-select-pill:hover {
+  background-color: #f7ba21;
+  color: black;
+}
+
+.workspace-tab-header {
+  cursor: pointer;
+}
+
+.multi-select-pill-remove-button:hover, lucide-x:hover {
+  color: black;
+}
+
+button:not(.clickable-icon) {
+  background-color: var(--text-accent);
+}
+
+#twcss .text-modifier-error {
+  color: black;
 }
 
 /* Mobile
